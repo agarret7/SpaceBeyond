@@ -1,0 +1,6 @@
+'f' opens menu asking for module to spawn:
+    Provides list of possible modules
+
+Add special relativity and Alcubierre drive (warp factor = 1 + ln(c)) where c is the length contraction.
+Add RCS thrusters
+Change thrusters to be engines, not blocks.
