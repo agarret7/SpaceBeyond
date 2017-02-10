@@ -13,8 +13,8 @@ def initialize_world():
 
     ### WORLD'S INITIAL SETTINGS ###
 
-    initial_objects = [GravitationalBody(X = np.array([1.5*10**11, 0]), m = 1.989*10**32, sprites = {'default' : pygame.image.load('../graphics/Sun.png')}),
-                       GravitationalBody(X = np.array([-1500, 0]), m = 10**19, sprites = {'default' : pygame.image.load('../graphics/Earth.png')})]
+    initial_objects = [GravitationalBody(X = np.array([1.5*10**11, 0]), m = 1.989*10**32, sprites = {'default' : pygame.image.load('graphics/Sun.png')}),
+                       GravitationalBody(X = np.array([-1500, 0]), m = 10**19, sprites = {'default' : pygame.image.load('graphics/Earth.png')})]
 
     player_ship = Ship(module_type="Core", v = np.array([0,-500]))
     world = World(player_ship, Camera(), initial_objects)

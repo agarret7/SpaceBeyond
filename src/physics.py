@@ -38,7 +38,7 @@ class PhysicsObject():
         self.X_cm = self.X + self.rel_X_cm
 
         if 'default' not in self.sprites.keys():
-            self.sprites = {'default' : pygame.image.load("../graphics/" + type(self).__name__ + ".png")}
+            self.sprites = {'default' : pygame.image.load("graphics/" + type(self).__name__ + ".png")}
         
         self.current_sprite = self.sprites['default']
         self.size = np.asarray(self.current_sprite.get_size()) - self.alpha_buffer
@@ -81,7 +81,7 @@ class Module(PhysicsObject):
         self.add_params(module_type="Hull", health=0)
         super().__init__(**kwargs)
 
-        self.sprites['default'] = pygame.image.load("../graphics/" + type(self).__name__ + ".png")
+        self.sprites['default'] = pygame.image.load("graphics/" + type(self).__name__ + ".png")
                   
         self.following_mouse = False
         
@@ -134,7 +134,7 @@ class Thruster(AttachedModule):
         self.add_params(F_max=2000000, tau_max=0)
         super().__init__(**kwargs)
 
-        self.sprites['on'] = pygame.image.load("../graphics/" + type(self).__name__ + "_on.png")
+        self.sprites['on'] = pygame.image.load("graphics/" + type(self).__name__ + "_on.png")
         
         if self.module_orientation == 0:
             self.F_max = np.array([self.F_max, 0])
